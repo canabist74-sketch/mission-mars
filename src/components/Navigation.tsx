@@ -78,11 +78,11 @@ export const Navigation: React.FC<NavigationProps> = ({ activeStage, onSelectSta
             </button>
           </nav>
 
-          {/* Zone 3: 1 primary action area (Audio toggle & Mobile menu button) */}
-          <div className="flex items-center gap-3 shrink-0">
+          {/* Zone 3: 1 primary action area (Audio toggle, PDF Export & Mobile menu button) */}
+          <div className="flex items-center gap-2.5 shrink-0">
             <button
               onClick={handleAudioToggle}
-              className={`inline-flex items-center gap-2 px-3 py-1.5 text-xs font-mono rounded border transition-colors ${
+              className={`inline-flex items-center gap-1.5 px-2.5 py-1.5 text-xs font-mono rounded border transition-colors ${
                 isAudioActive
                   ? 'border-amber-500/60 bg-amber-500/10 text-amber-300'
                   : 'border-slate-800 bg-slate-900/50 text-slate-400 hover:text-slate-200 hover:border-slate-700'
@@ -93,6 +93,16 @@ export const Navigation: React.FC<NavigationProps> = ({ activeStage, onSelectSta
               {isAudioActive ? <Volume2 className="w-3.5 h-3.5 text-amber-400" /> : <VolumeX className="w-3.5 h-3.5 text-slate-500" />}
               <span className="hidden sm:inline">{isAudioActive ? 'Audio ON' : 'Audio OFF'}</span>
             </button>
+
+            <a
+              href="/mission_mars_dossier.pdf"
+              download="Mission_Mars_The_Human_Odyssey_Dossier.pdf"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-mono rounded border border-slate-700 bg-slate-900/70 text-slate-300 hover:text-amber-300 hover:border-amber-500/50 transition-colors whitespace-nowrap shrink-0"
+              title="Download 4-page Expedition Dossier & PRD PDF"
+            >
+              <span className="text-amber-400 font-bold">PDF</span>
+              <span className="hidden sm:inline">Dossier</span>
+            </a>
 
             <button
               onClick={() => handleNavClick('launch')}

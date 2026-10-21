@@ -55,7 +55,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onBeginMission, onExpl
         </p>
 
         {/* Action CTAs */}
-        <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3.5">
           <button
             onClick={onBeginMission}
             className="w-full sm:w-auto px-8 py-3.5 text-sm uppercase tracking-wider font-semibold bg-amber-500 text-slate-950 rounded hover:bg-amber-400 transition-all shadow-lg shadow-amber-500/20 active:scale-95"
@@ -64,10 +64,18 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onBeginMission, onExpl
           </button>
           <button
             onClick={onExploreTelemetry}
-            className="w-full sm:w-auto px-7 py-3.5 text-sm uppercase tracking-wider font-medium text-slate-300 border border-slate-700 bg-slate-900/60 rounded hover:bg-slate-800 hover:text-white transition-all active:scale-95"
+            className="w-full sm:w-auto px-6 py-3.5 text-sm uppercase tracking-wider font-medium text-slate-300 border border-slate-700 bg-slate-900/60 rounded hover:bg-slate-800 hover:text-white transition-all active:scale-95"
           >
             Flight Telemetry
           </button>
+          <a
+            href="/mission_mars_dossier.pdf"
+            download="Mission_Mars_The_Human_Odyssey_Dossier.pdf"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3.5 text-sm font-mono text-amber-300/90 border border-amber-500/30 bg-amber-500/10 rounded hover:bg-amber-500/20 transition-all active:scale-95"
+            title="Download full 4-page Mission Dossier PDF"
+          >
+            <span>PDF Dossier</span>
+          </a>
         </div>
       </div>
 
