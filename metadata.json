@@ -1,0 +1,6 @@
+{
+  "name": "Mission: Mars — The Human Odyssey",
+  "description": "An interactive, cinematic digital odyssey chronicling humanity's journey from Earth to permanent settlement on Mars.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
